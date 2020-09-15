@@ -1,0 +1,3 @@
+https://stackoverflow.com/questions/14227345/longest-path-in-a-particular-type-of-graph
+
+https://introtcs.org/public/lec_12_NP.html?fbclid=IwAR35R77Eo9Hn0RHKOktr8-MgS-eKwRwW4sBCgxIeegsDJcDfyjL5Q_Zl8U8
