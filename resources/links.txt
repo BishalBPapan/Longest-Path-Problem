@@ -1,3 +1,15 @@
+https://en.wikipedia.org/wiki/Longest_path_problem
+
+https://mathworld.wolfram.com/LongestPath.html
+
 https://stackoverflow.com/questions/14227345/longest-path-in-a-particular-type-of-graph
 
 https://introtcs.org/public/lec_12_NP.html?fbclid=IwAR35R77Eo9Hn0RHKOktr8-MgS-eKwRwW4sBCgxIeegsDJcDfyjL5Q_Zl8U8
+
+https://www.geeksforgeeks.org/find-longest-path-directed-acyclic-graph/
+
+https://www.coursera.org/lecture/advanced-algorithms-and-complexity/longest-path-problem-xIcGw
+
+https://doi.org/10.1007/978-3-540-30551-4_74
+
+https://doi.org/10.1016/j.dam.2011.08.010
