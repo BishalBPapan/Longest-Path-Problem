@@ -1,0 +1,18 @@
+let the length of longest path be at least k.
+
+No of clauses = q (1....q)
+No of variables = n (1....n)
+
+start node to start_vertex_1 node = 1
+end_vertex_n node to start_clauses node = 1
+start_clauses node to start_clause_1 node = 1
+end_clause_q node to end node = 1
+
+each loop has 2*(q+1)
+n loops = 2n*(q+1)
+
+edges between claues = q-1
+jumping to next variable = n-1
+jumping from clauses to variables = 2*q
+total = 4 + 2n*(q+1) + q-1 + n-1 + 2*q
+
