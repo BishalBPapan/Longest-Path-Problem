@@ -8,8 +8,8 @@ end_vertex_n node to start_clauses node = 1
 start_clauses node to start_clause_1 node = 1
 end_clause_q node to end node = 1
 
-each loop has 2*(q+1)
-n loops = 2n*(q+1)
+each loop has (q+1)
+n loops = n*(q+1)
 
 edges between claues = q-1
 jumping to next variable = n-1
