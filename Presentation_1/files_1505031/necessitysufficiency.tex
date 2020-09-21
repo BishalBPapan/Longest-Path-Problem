@@ -1,0 +1,139 @@
+\begin{frame}{Reduction from 3-SAT formula}
+
+Clearly this construction is polynomial.  \onslide<+->{\begin{block}{Set k}
+ $k = n(q+1) + n-1 + 2q + q-1 + 4
+$
+\end{block}}
+
+\onslide<+->{\begin{block}{Simplifying}
+ $k = 2+2n+(3+n)q$
+\end{block}}
+
+\onslide<+->{
+\begin{block}{Claim}
+$Y$ is satisfiable if and only if $G$ has a path of length of at least $k$.
+\end{block}}
+
+
+\end{frame}
+
+\begin{frame}{Reduction from 3-SAT formula}
+\setbeamercovered{dynamic}
+\begin{columns}
+\begin{column}{0.45\textwidth}
+\begin{block}{Necessity}
+If $Y$ is satisfiable, then $G$ has a path of length of at least $k$.
+\end{block}
+
+
+  \begin{itemize} 
+        \item<1-> Since $Y$ is satisfiable, each clause $c_j$ (where $1 \leq j \leq q$) is true. There must be at least one true literal per clause.
+        
+\end{itemize}
+\end{column}
+\begin{column}{0.55\textwidth}
+    \begin{overlayarea}{0.55\textwidth}{8cm}
+        \only<1->{\include{files_1505043/necessity_1}}
+    \end{overlayarea}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Reduction from 3-SAT formula}
+\setbeamercovered{dynamic}
+\begin{columns}
+\begin{column}{0.45\textwidth}
+\begin{block}{Necessity}
+If $Y$ is satisfiable, then $G$ has a path of length of at least $k$.
+\end{block}
+
+
+  \begin{itemize} 
+        \item<1-> Since Y is satisfiable, every variable must have an assignment ($True$ or $False$). So upper path of variable $x_i$ is taken if it is true and lower path is taken if it is false. Thus for every variable, either lower or upper path is taken.
+        
+\end{itemize}
+\end{column}
+\begin{column}{0.55\textwidth}
+    \begin{overlayarea}{0.55\textwidth}{8cm}
+        \only<1->{\include{files_1505043/necessity_2}}
+    \end{overlayarea}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Reduction from 3-SAT formula}
+\setbeamercovered{dynamic}
+\begin{columns}
+\begin{column}{0.45\textwidth}
+\begin{block}{Necessity}
+If $Y$ is satisfiable, then $G$ has a path of length of at least $k$.
+\end{block}
+
+  \begin{itemize} 
+    \item<1->Length of a path between the start and the end vertex in one loop is $q+1$. Thus total $n*(q+1)$ edges are taken.
+    \item<2-> To construct a path, we need to take edges from ending vertex of each loop to starting vertex of next loop. 
+    \item<3->So total $n-1$ edges are taken.
+
+\end{itemize}
+\end{column}
+\begin{column}{0.55\textwidth}
+    \begin{overlayarea}{0.55\textwidth}{8cm}
+        \only<1>{\include{files_1505043/necessity_2}}
+        \only<2->{\include{files_1505043/necessity_3}}
+    \end{overlayarea}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Reduction from 3-SAT formula}
+\setbeamercovered{dynamic}
+\begin{columns}
+\begin{column}{0.45\textwidth}
+\begin{block}{Necessity}
+If $Y$ is satisfiable, then $G$ has a path of length of at least $k$.
+\end{block}
+
+  \begin{itemize} 
+    \item<1->If the term $x_i$ is true
+     and clause $c_j$ has the term $x_i$, we take edges from $c_{j_{in}}$ to 
+        $x_{i,j\_F}$  % $x_{i,j_F}$ % 
+        and from $x_{i,j\_F}$ to $c_{j_{out}}$. And if the term $x_i$ is false and clause $c_j$ has the term $\overline{x_i}$, we need to take edges from $c_{j_{in}}$ to $x_{i,j\_T}$ and from $x_{i,j\_T}$ to $c_{j_{out}}$. 
+        \item<2->
+        Thus for q clauses, total $2*q$ edges are taken.
+
+\end{itemize}
+\end{column}
+\begin{column}{0.55\textwidth}
+    \begin{overlayarea}{0.55\textwidth}{8cm}
+        \only<1->{\include{files_1505043/necessity_4}}
+    \end{overlayarea}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Reduction from 3-SAT formula}
+\setbeamercovered{dynamic}
+\begin{columns}
+\begin{column}{0.45\textwidth}
+\begin{block}{Necessity}
+If $Y$ is satisfiable, then $G$ has a path of length of at least $k$.
+\end{block}
+
+  \begin{itemize} 
+    \item<1->
+        To complete the path, edges from $c_{j_{out}}$ to $c_{j+1_{in}}$ must be taken.
+        \item<2-> Total $q-1$ edges are taken. 
+        \item<3-> Edges from $s$ to $s_1$,
+        $e_n$ to $c_{start}$, $c_{start}$ to $c_{1_{in}}$ and $c_{q_{out}}$ to $t$ is taken. 
+        \item<4->Thus total $n*(q+1) + n-1 + 2*q + 4$ edges is taken. So the length of the path is $k$.
+\end{itemize}
+\end{column}
+\begin{column}{0.55\textwidth}
+    \begin{overlayarea}{0.55\textwidth}{8cm}
+        \only<1,2>{\include{files_1505043/necessity_5}}
+        \only<3>{\include{files_1505043/necessity_6}}
+        \only<4>{\include{files_1505043/necessity_final}}
+    \end{overlayarea}
+\end{column}
+\end{columns}
+\end{frame}

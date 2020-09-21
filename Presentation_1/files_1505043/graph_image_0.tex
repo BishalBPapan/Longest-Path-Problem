@@ -1,0 +1,35 @@
+\begin{tikzpicture}[roundnode/.style={circle, fill=black, inner sep=0pt, minimum size=1.2mm}]
+
+    %\foreach \i [count=\ni] in {120,70,...,-180}
+        %\node[roundnode] at (\i:1.4cm) (u\ni) {};
+    
+    %\node[roundnode][label=\scalebox{0.9}{${s}$}](u1) at (-1,8.0) {};
+    \node[style={circle, fill=white, inner sep=0pt, minimum size=1.2mm}](u1) at (-1, 8.0) {};
+    
+    \node[roundnode][label=\scalebox{0.8}{${s_i}$}](u2) at (-0.25,5.0) {};
+    \node[roundnode][label=\scalebox{0.75}{${v_{i,1\_T}}$}](u3) at (0.5,5.39) {};
+    \node[roundnode][label=\scalebox{0.75}{${v_{i,1\_F}}$}](u4) at (0.5,4.61) {};
+    \node[roundnode][label=\scalebox{0.75}{${v_{i,2\_T}}$}](u5) at (2.0,5.39) {};
+    \node[roundnode][label=\scalebox{0.75}{${v_{i,2\_F}}$}](u6) at (2.0,4.61) {};
+    %\node[roundnode][label=\scalebox{0.75}{${v_{3,1\_T}}$}](u7) at (2.5,8.15) {};
+    %\node[roundnode][label=\scalebox{0.75}{${v_{3,1\_F}}$}](u8) at (2.5,7.45) {};
+    \node[roundnode][label=\scalebox{0.75}{${v_{i,q\_T}}$}](u9) at (3.5,5.39) {};
+    \node[roundnode][label=\scalebox{0.75}{${v_{i,q\_F}}$}](u10) at (3.5,4.61) {};
+    \node[roundnode][label=\scalebox{0.8}{$e_i$}](u11) at (4.25,5.0) {};
+    \node[style={circle, fill=white, inner sep=0pt, minimum size=0.1mm}][label=\scalebox{1}{$x_i$}](u71) at (4.75, 4.61) {};
+    
+    %\node[roundnode](u52) at (4.7,2.55) {};
+    \node[style={circle, fill=white, inner sep=0pt, minimum size=1.2mm}](u81) at (4.75, 2.55) {};
+    
+            \draw[-] (u2) -- (u3);
+            \draw[-] (u2) -- (u4);
+            \draw[-] (u3) -- (u5); 
+            \draw[-] (u4) -- (u6);
+            %\draw[-] (u5) -- (u7);
+            %\draw[-] (u6) -- (u8);
+            \draw[dotted, thick] (u5) -- (u9);
+            \draw[dotted, thick] (u6) -- (u10);
+            \draw[-] (u9) -- (u11); 
+            \draw[-] (u10) -- (u11);
+    
+\end{tikzpicture}

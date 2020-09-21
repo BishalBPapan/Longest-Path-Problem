@@ -1,0 +1,67 @@
+\begin{frame}{Polynomial time variations}
+    \centering
+    \scalebox{1}{%
+    \begin{tabular}{|c|c|c|} \hline
+    \textbf{Special graphs} & \textbf{Complexity} & \textbf{Comments} \\ \hline \hline
+    Tree & Linear & Dijkstra's algorithm \cite{BULTERMAN200293}\\ \hline 
+    Cacti Graph & $O(n^{2})$ & \cite{10.1007/978-3-540-30551-4_74} \\ \hline
+    Bipartite Permutation Graph & Linear &  \cite{UEHARA200771}  \\ \hline
+    Directed Acyclic Graph & Linear & Dynamic approach \\ \hline
+    Interval Graph & $O(n^{4})$ & Dynamic approach \cite{inproceedings} \\ \hline
+    Circular Arc Graph & $O(n^{4})$ & Dynamic approach \cite{MERTZIOS2014383} \\ \hline
+    Co-compatibility Graph & $O(n^{7})$ & From Hasse diagram \cite{Ioannidou2013} \\ \hline 
+\end{tabular}}
+%% https://stackoverflow.com/questions/2978125/beamer-make-itemize-and-space-occupied-disappear
+    \begin{itemize}
+        \item <only@1> Tree is undirected acyclic graph.Dijkstra proposed an algorithm for this in 1960.
+        \item <only@2>Cacti is a special kind of block graph which each block is a cycle.Two cycle share at most one vertex which is a separator.
+        \item <only@3>The class of bipartite permutation graphs is the intersection of two well known graph classes: bipartite graphs and permutation graphs. A complete bipartite decomposition of a bipartite permutation graph is proposed in this reference.
+        \item <only@4>The longest path for general graphs does not have a optimal substructure property but it has for weighted directed acyclic graphs.
+        \item <only@5>An interval graph is an undirected graph formed from a set of intervals on the real line, with a vertex for each interval and an edge between vertices whose intervals intersect. It is the intersection graph of the intervals.
+        \item <only@6>In graph theory, a circular-arc graph is the intersection graph of a set of arcs on the circle.It has one vertex for each arc in the set, and an edge between every pair of vertices corresponding to arcs that intersect.
+        \item <only@7>In graph theory, a comparability graph is an undirected graph that connects pairs of elements that are comparable to each other in a partial order.
+    \end{itemize}
+\end{frame}
+
+
+
+
+\begin{frame}{Observation}
+    \begin{itemize}
+        \item The longest path problem is solvable in polynomial time 
+on any class of graphs with bounded tree-width or bounded clique-width, 
+such as the distance-hereditary graphs.
+        \item Finally, it is clearly NP-hard 
+on all graph classes on which the Hamiltonian path problem is NP-hard, 
+such as on split graphs, circle graphs, and planar graphs.
+    \end{itemize}
+    
+\end{frame}
+
+% \begin{frame}{Polynomial time variations}
+%     \centering
+%     \scalebox{0.75}{%
+%     \begin{tabular}{|c|c|c|} \hline
+%     \textbf{Special graphs} & \textbf{Complexity} & \textbf{Comments} \\ \hline \hline
+%     Tree & Linear & Dijkstra's algorithm  \citep{BULTERMAN200293}\\ \hline 
+%     Bipertite Permutation Graph & Linear &  \citep{UEHARA200771}  \\ \hline
+%     Cactus Graph & Linear & \citep{10.1007/978-3-540-30551-4_74} \\ \hline
+%     Directed Acyclic Graph & Linear & Dynamic approach \\ \hline
+%     Interval Graph & $O(n^{4})$ & Dynamic approach \citep{inproceedings} \\ \hline
+%     Circular Arc Graph & Polynomial & Dynamic approach \citep{MERTZIOS2014383} \\ \hline
+%     Co-compatibility Graph & $O(n^{7})$ & Based on Hasse diagram \\ \hline 
+    
+%     \end{tabular}}
+% \end{frame}
+% \begin{frame}{Observation}
+%     \begin{itemize}
+%         \item The longest path problem is solvable in polynomial time 
+% on any class of graphs with bounded tree-width or bounded clique-width, 
+% such as the distance-hereditary graphs.
+%         \item Finally, it is clearly NP-hard 
+% on all graph classes on which the Hamiltonian path problem is NP-hard, 
+% such as on split graphs, circle graphs, and planar graphs.
+%     \end{itemize}
+    
+% \end{frame}
+

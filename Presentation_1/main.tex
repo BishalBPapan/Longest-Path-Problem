@@ -1,0 +1,384 @@
+\documentclass[xcolor=dvipsnames]{beamer}
+%\usepackage[utf8]{inputenc}
+%\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{MnSymbol}
+\usepackage{tikz}
+\usepackage{media9}
+\usetikzlibrary{arrows,shapes}
+\usepackage{stmaryrd}
+\usepackage{colortbl}
+\usepackage{caption}
+\usepackage{comment}
+\usepackage{subfiles}
+%\usepackage[utf8]{inputenc}
+\usepackage[british,UKenglish,USenglish,english,american]{babel}
+%\usepackage[utf8]{vietnam}
+\usepackage{pdfpages}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{booktabs}
+\usepackage{soul}
+\usepackage[english]{babel}
+\usepackage[normalem]{ulem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% For beautification of citations
+% \usepackage[round]{natbib}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{tcolorbox}
+\usepackage{lipsum}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{pgf}
+\usepackage{etex}
+\usepackage{tikz,pgfplots}
+
+\tikzstyle{every picture}+=[remember picture]
+% By default all math in TikZ nodes are set in inline mode. Change this to
+% displaystyle so that we don't get small fractions.
+\everymath{\displaystyle}
+
+
+\usetheme{Antibes}
+%\usetheme{Madrid}
+%\usecolortheme[named=Maroon]{structure}
+\usecolortheme{dolphin}
+\usefonttheme{professionalfonts}
+\useoutertheme{infolines}
+\useinnertheme{circles}
+
+\newtheorem*{bem}{Bemerkung}
+
+\usepackage{tikz}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Java,
+  aboveskip=2mm,
+  belowskip=12mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=2
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title[Longest Path Problem]{Longest Path Problem}
+\author[Faisal Alam Mahbub Wahab Papan]{ \textbf{
+                                Ahnaf Faisal, 1505005\\
+                                Raihanul Alam, 1505010\\
+                                Mahim Mahbub, 1505022\\
+                                Zahin Wahab, 1505031\\
+                                Bishal Basak Papan, 1505043
+                                }}
+\institute[BUET]{Department of Computer Science and Engineering, \\
+        Bangladesh University of Engineering and Technology}
+%\logo{\includegraphics[height=1.5cm]{images/vnulogo.pdf}}
+%\logo{\includegraphics[height=1.8cm]{images/logo-iu.pdf}}
+%\logo{\pgfimage[height=0.8cm]{images/footweb.pdf}}
+
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}
+\frametitle{\textbf{Outline:}}
+\tableofcontents
+\end{frame}
+
+
+% \begin{section}{World Class Introduction}
+\begin{section}{Introduction}
+    \subfile{files_1505022/ApplicationAndProblemStatement.tex}
+\end{section}
+
+\begin{section}{Longest Path Problem is NP-Complete}
+\subfile{files_1505031/Proving_NPC_takes_two_steps.tex}
+
+
+\end{section}
+
+
+\begin{section}{Longest Path Problem is in NP}
+%\subfile{files_1505031/Proving_NPC_takes_two_steps.tex}
+\subfile{files_1505031/Proving_NP.tex}
+
+\end{section}
+\begin{section}{Longest Path Problem is NP-Hard}
+\subfile{files_1505031/Proving_NP_Hard.tex}
+\end{section}
+\begin{section}{Reduction from 3-SAT problem}
+\subfile{files_1505031/reduction_From_3SAT.tex}
+\end{section}
+
+\begin{section}{Graph construction }
+
+\begin{frame}{Graph Construction}
+\begin{columns}
+\begin{column}{0.45\textwidth}
+\begin{itemize}
+\item<1->There is a source vertex $s$ and a destination vertex $t$ in $G$.
+\end{itemize}
+\end{column}
+%\end{frame}
+%\begin{frame}{Graph Construction}
+\begin{column}{0.55\textwidth}
+    \begin{overlayarea}{0.55\textwidth}{8cm}
+        \include{files_1505043/graph_image}
+    \end{overlayarea}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Graph Construction}
+\begin{columns}
+\begin{column}{0.45\textwidth}
+\begin{itemize}
+\item For each variable $x_i$ in $Y$, where $1 \leq i \leq n$, we construct a loop like this
+\end{itemize}
+\end{column}
+\begin{column}{0.55\textwidth}
+    \begin{overlayarea}{0.55\textwidth}{8cm}
+        \include{files_1505043/graph_image_0}
+    \end{overlayarea}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Graph Construction}
+\begin{columns}
+\begin{column}{0.45\textwidth}
+\begin{itemize}
+\item Every loop has a start vertex, $s_i$, and an end vertex, $e_i$. 
+\item Each loop contains two paths: upper and lower.
+\item Each vertex in the path corresponds 
+to the \{0,1\} or \{True, False\} assignment of the variable in a clause $c_j$, where $1 \leq j \leq q$.
+\item Number of vertices in each path is $q+2$.% 
+\end{itemize}
+\end{column}
+\begin{column}{0.55\textwidth}
+    \begin{overlayarea}{0.55\textwidth}{8cm}
+        \include{files_1505043/graph_image_0}
+    \end{overlayarea}
+\end{column}
+\end{columns}
+\end{frame}
+
+
+\begin{frame}{Graph Construction}
+\begin{columns}
+\begin{column}{0.45\textwidth}
+\begin{itemize}
+\item $n$ number of loops between $s$ and $t$.
+\item Start node of the first variable will be adjacent to $s$.
+\end{itemize}
+\end{column}
+\begin{column}{0.55\textwidth}
+    \begin{overlayarea}{0.55\textwidth}{8cm}
+    %\begin{figure}
+        \include{files_1505043/graph_image_1}%
+    %\end{figure}
+    \end{overlayarea}
+\end{column}
+%\end{wrapfigure}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Graph Construction}
+\begin{columns}
+\begin{column}{0.45\textwidth}
+\begin{itemize}
+\item<1->Edge is added between the end vertex of a variable and the start vertex of its next variable.
+\end{itemize}
+\end{column}
+%\end{frame}
+%\begin{frame}{Graph Construction}
+\begin{column}{0.55\textwidth}
+    \begin{overlayarea}{0.55\textwidth}{8cm}
+        \include{files_1505043/graph_image_2}
+    \end{overlayarea}
+\end{column}
+\end{columns}
+\end{frame}
+
+
+\begin{frame}{Graph Construction}
+\begin{columns}
+\begin{column}{0.45\textwidth}
+\begin{itemize}
+\item<1->Two vertices  ($c_{in}$ and $c_{out}$) are added per clause, $c_j$ where $1 \leq j \leq q$. 
+\item<1->Edges are added between the $out$ vertex of one clause to the $in$ vertex of next clause.
+\end{itemize}
+\end{column}
+%\end{frame}
+%\begin{frame}{Graph Construction}
+\begin{column}{0.55\textwidth}
+    \begin{overlayarea}{0.55\textwidth}{8cm}
+        \include{files_1505043/reduction_example_0}
+    \end{overlayarea}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Graph Construction}
+\begin{columns}
+\begin{column}{0.45\textwidth}
+\begin{itemize}
+\item<1-> We will add a $gadget$ for each clause in $Y$.
+\item<1-> For example, if the $i^{th}$ clause had the form $x_7 \bigvee \overline{x_5} \bigvee x_2$ then
+\item[-]<2-> one path would go through a vertex in the lower loop corresponding
+to $x_7$, 
+\item[-]<3-> another path would go through a vertex in the upper loop corresponding to $x_5$ and 
+\item[-]<4-> the third would go through the lower loop corresponding to $x_2$.
+\end{itemize}
+\end{column}
+%\end{frame}
+%\begin{frame}{Graph Construction}
+\begin{column}{0.55\textwidth}
+    \begin{overlayarea}{0.55\textwidth}{8cm}
+        \only<1>{\include{files_1505043/reduction_example_1_1}}
+        \only<2>{\include{files_1505043/reduction_example_1_2}}
+        \only<3>{\include{files_1505043/reduction_example_1_3}}
+        \only<4>{\include{files_1505043/reduction_example_1_4}}
+    \end{overlayarea}
+\end{column}
+\end{columns}
+\end{frame}
+
+%\begin{frame}{Graph Construction}
+%Edges are added from the clauses to the loops i.e. if the $i^{th}$ clause had the form $x_7$ \bigvee $\overline{x_5}$ \bigvee $x_2$ then
+%one path would go through a vertex in the lower loop corresponding
+%to $x_7$, one path would go through a vertex in the upper loop corresponding to $x_5$ and the third would go through the lower loop corresponding to $x_2$.
+%\end{frame}
+
+\begin{frame}{Graph Construction}
+\begin{columns}
+\begin{column}{0.45\textwidth}
+    \include{files_1505043/reduction_eqn_Y}
+\end{column}
+\begin{column}{0.55\textwidth}
+    \begin{overlayarea}{0.55\textwidth}{8cm}
+        \only<3->{\include{files_1505043/reduction_example}}
+    \end{overlayarea}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Finding the Path}
+\begin{columns}
+\begin{column}{0.45\textwidth}
+    \include{files_1505043/path_finding}
+\end{column}
+\begin{column}{0.55\textwidth}
+    \begin{overlayarea}{0.55\textwidth}{8cm}
+        \only<1->{\include{files_1505043/reduction_example_2}}
+    \end{overlayarea}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Finding the Path}
+\begin{columns}
+\begin{column}{0.45\textwidth}
+    \include{files_1505043/path_finding_2}
+\end{column}
+\begin{column}{0.55\textwidth}
+    \begin{overlayarea}{0.55\textwidth}{8cm}
+        \only<1->{\include{files_1505043/reduction_example_3}}
+    \end{overlayarea}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Finding the Path}
+\begin{columns}
+\begin{column}{0.45\textwidth}
+    \include{files_1505043/before_reduction}
+\end{column}
+\begin{column}{0.55\textwidth}
+    \begin{overlayarea}{0.55\textwidth}{8cm}
+        \only<1->{\include{files_1505043/reduction_example_3}}
+    \end{overlayarea}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{section}{Reduction From 3-SAT}
+\subfile{files_1505031/necessitysufficiency.tex}
+\subfile{files_1505043/sufficiency.tex}
+
+\end{section}
+
+
+% \begin{figure}
+%     \centering
+%     \includegraphics[scale=0.20]{longest-path-algo-proof.png}
+%     \caption{Messenger theke newa}
+%     \label{fig:my_label}
+% \end{figure}
+
+%%% References add korish k kare bolosh? %%%%
+\begin{section}{Variations}
+    \include{files_1505005/variations}
+\end{section}
+\begin{section}{Problems that Longest Path Problem Reduces To}
+    \subfile{files_1505010/reduces_to.tex}
+\end{section}
+
+\end{section}
+
+
+\begin{frame}[allowframebreaks]{References}
+    \bibliographystyle{unsrt}
+    % \bibliographystyle{plainnat}
+    \bibliography{bibliography}
+    
+\end{frame}
+  
+  
+
+   
+%*********************************************************************************************
+%**********************************************************************************************
+%\begin{frame}\frametitle{}
+%  \centering
+%    \includemedia[
+%  width=0.6\linewidth,height=0.45\linewidth,
+%  activate=pageopen,
+%  flashvars={
+%    modestbranding=1 % no YT logo in control bar
+%   &autohide=1       % controlbar autohide
+%   &showinfo=0       % no title and other info before start
+%  }
+%]{}{http://www.youtube.com/v/dISaXUlilkU?rel=0}   % Flash file 
+      
+%\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}

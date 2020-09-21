@@ -1,0 +1,48 @@
+\begin{frame}{Reduction from 3-SAT formula}
+\setbeamercovered{dynamic}
+\begin{block}{Sufficiency}
+If $G$ has a path of length at least $k$, then $Y$ is satisfiable.
+\end{block}
+
+\begin{itemize} 
+    \item<1-> Since $G$ has a path $P$ of length at least $k$, the value assigned to each literal $x_i$ will have a corresponding path($True$ or $False$) to it.
+        
+   
+         
+    \item<2-> For a literal, $x_{i}$, we assign $True$ to $x_i$ if $P$ contains the upper/true path in the loop of $x_{i}$ and assign $False$ if $P$ contains the lower path. 
+     \item<3-> Due to the construction of $G$, for each literal in clause $c_j$, the complement term will have two edges with that clause, one edge with $c_{j_{in}}$ and another edge with $c_{j_{out}}$.
+    
+    \item<4-> If a clause $c_j$ contains the literal $x_i$, then $True$ is assigned to $x_i$ which will make $c_j$ $True$. And if a clause $c_j$ contains the literal $\overline{x_i}$, then the value assigned to $\overline{x_i}$ is  $False$ which will lead $c_j$ to being $True$.
+     
+     
+    \item<5-> This will hold for each clause in $Y$. So $Y$ is satisfiable. 
+        
+\end{itemize} 
+\end{frame}
+
+
+% \begin{frame}{Reduction from 3-SAT formula}
+% \setbeamercovered{dynamic}
+% \begin{block}{Necessity}
+% If Y is satisfiable, then G has a path of length of at least k.
+% \end{block}
+
+%   \begin{itemize} 
+       
+%         \item<1-> Say for clause $c_j$ if the term $x_i$ is true, we take edge from $c_{j_{in}}$ to 
+%         $x_{i,j\_F}$  % $x_{i,j_F}$ % 
+%         and from $x_{i,j\_F}$ to $c_{j_{out}}$ is taken. And for clause $c_j$, if the term $\overline{x_i}$ is true, we need to take edge from $c_{j_{in}}$ to $x_{i,j\_T}$ and from $x_{i,j\_T}$ to $c_{j_{out}}$. 
+%         \item<2->
+%         Thus for each clause, at least $2*q$ edges are taken.
+        
+%          \item<3->
+%         To complete the path, edges from $c_{j_{in}}$ to $c_{j+1_{in}}$ must be taken.
+%         \item<4-> Total $q-1$ edges are taken. 
+%         \item<5-> Edges from $s$ to $s_1$,
+% $e_n$ to $c_{start}$, $c_{start}$ to $c_{1_{in}}$ and $c_{q_{out}}$ to $t$ is taken. 
+% \item<6->Thus total $n*(q+1) + n-1 + 2*q + 4$ edges is taken. So the length of the path is $k$.
+        
+% \end{itemize} 
+
+
+% \end{frame}

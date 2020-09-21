@@ -1,0 +1,82 @@
+\begin{frame}{Project Management 101}
+
+\begin{itemize}
+    \item<1-> This is my first project as a manager. 
+    \item<2-> Let's analyze the activities my team has to do for project completion.
+    \item<3-> Wish me luck !
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}{List of Activities}
+
+\begin{table}[scale=0.5]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        \textbf{Activity ID} & \textbf{Activity} & \textbf{Duration} & 
+        \textbf{Dependencies} \\
+        % \textbf{Dependent Activity ID} \\
+         \hline
+         \hline
+         A & Market Survey & 3 & -\\\hline
+         C & Provide questionnaires & 4 & -\\\hline
+         B & Research company policies & 4 & A\\\hline
+         D & Data flow analysis & 8 & B,C\\\hline
+         E & Prototyping & 5 & B,C\\\hline
+         F & Get feedback for prototype & 3 & E\\\hline
+         G & Cost-benefit analysis & 3 & D\\\hline
+         H & Prepare and present proposal & 2 & F,G\\\hline         
+        %  \hline
+    
+    \end{tabular}
+    \caption{Activities, their duration (weeks) and dependencies}
+    \label{tab:activities}
+\end{table}
+
+\end{frame}
+
+% \begin{frame}{Activity Analysis using PERT Diagram}
+\begin{frame}{Analysis using PERT Diagram}
+\subfile{files_1505022/Diag1.tex}
+\end{frame}
+
+\begin{frame}{Critical Path ?}
+\subfile{files_1505022/Diag2.tex}
+\end{frame}
+
+\begin{frame}{Critical Path ?}
+\subfile{files_1505022/Diag3.tex}
+\end{frame}
+
+
+\begin{frame}{Critical Path ?}
+\subfile{files_1505022/Diag4.tex}
+\end{frame}
+
+\begin{frame}{Critical Path ?}
+\subfile{files_1505022/Diag5.tex}
+\end{frame}
+
+\begin{frame}{Longest Path Problem}
+    % Finding critical path directly leads to
+    \begin{itemize}
+        \item[]<1-> This directly leads to the problem we are tasked with analyzing: \textbf{Longest Path Problem}.
+        \item[]<2-> 
+        \begin{block}{\textbf{Decision Version (Weighted})}
+            {Given a graph $G$, and an integer $k$, does the graph $G$ have a longest path of \textit{total weight} \textbf{at least} $k$ ?}
+        \end{block}
+        
+        \item[]<3->
+        \begin{block}{\textbf{Decision Version (Un-Weighted)}}
+            {Given a graph $G$, and an integer $k$, does the graph $G$ have a longest path of \textit{total number of edges} \textbf{at least} $k$ ?}
+        \end{block}
+        
+    \end{itemize}
+    
+    
+    
+    
+    
+\end{frame}

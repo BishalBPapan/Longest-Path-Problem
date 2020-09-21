@@ -1,0 +1,31 @@
+\begin{frame}{Problems that Longest Path Problem Reduces To}
+    We now take a look at problems that can be reduced from longest path problem.
+    \begin{itemize}
+        \item <2-> Travelling Salesman Problem
+        \item[] <3-> \begin{block}{\textbf{Result}}
+                {Longest Path Problem $\leq_p$ Travelling Salesman Problem}
+            \end{block}
+        \item <4-> Two formulation of the Travelling Salesman Problem can be considered. In one version, the salesman visits each city(vertices) once and the other is more general where each city(vertices) may be visited more than once.
+        \item <5-> Both of these cases can be reduced to finding the longest path between two nodes in a finite, connected graph.
+        
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Problems that Longest Path Problem Reduces To}
+    \include{files_1505010/graph1}
+    \begin{itemize}
+        \item <1-> The construction of \textit{L(G)} from \textit{G}, with $S=8+8+8+8+6 = 38$ and $K$ taken to be $39$; the optimal cycle in $G$ is $(1,4,3,2,5)$ and the longest path in $L(G)$ is $(1,4,3,2,5,1')$.
+        \item <2->However, we couldn't find any other problem that longest path problem naturally reduces to.
+        
+    \end{itemize}
+\end{frame}
+
+% \begin{frame}{Problems that Longest Path Problem Reduces To}
+%     \begin{itemize}
+%         \item <1-> The construction of \textit{L(G)} from \textit{G}, with $S=8+8+8+8+6 = 38$ and $K$ taken to be $39$; the optimal cycle in $G$ is $(1,4,3,2,5)$ and the longest path in $L(G)$ is $(1,4,3,2,5,1')$.
+        
+%         \item <2->$K$ must be strictly greater than $S$. Otherwise, the reduction will not satisfy.
+        
+%         \item <3->However, we couldn't find any other problem that longest path problem naturally reduces to.
+%     \end{itemize}
+% \end{frame}

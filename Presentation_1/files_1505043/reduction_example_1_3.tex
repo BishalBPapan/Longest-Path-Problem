@@ -1,0 +1,157 @@
+\begin{tikzpicture}[roundnode/.style={circle, fill=black, inner sep=0pt, minimum size=1.2mm}]
+
+    %\foreach \i [count=\ni] in {120,70,...,-180}
+        %\node[roundnode] at (\i:1.4cm) (u\ni) {};
+    
+    \node[roundnode][label=\scalebox{0.9}{${s}$}](u1) at (-1,8.0) {};
+    \node[roundnode][label=\scalebox{0.8}{${s_2}$}](u2) at (-0.25,8.0) {};
+    \node[roundnode][label=\scalebox{0.75}{${v_{2,1\_T}}$}](u3) at (0.5,8.39) {};
+    \node[roundnode][label=\scalebox{0.75}{${v_{2,1\_F}}$}](u4) at (0.5,7.61) {};
+    \node[roundnode][label=\scalebox{0.75}{${v_{2,i\_T}}$}](u5) at (2.0,8.39) {};
+    \node[roundnode][label=\scalebox{0.75}{${v_{2,i\_F}}$}](u6) at (2.0,7.61) {};
+    %\node[roundnode][label=\scalebox{0.75}{${v_{3,1\_T}}$}](u7) at (2.5,8.15) {};
+    %\node[roundnode][label=\scalebox{0.75}{${v_{3,1\_F}}$}](u8) at (2.5,7.45) {};
+    \node[roundnode][label=\scalebox{0.75}{${v_{2,q\_T}}$}](u9) at (3.5,8.39) {};
+    \node[roundnode][label=\scalebox{0.75}{${v_{2,q\_F}}$}](u10) at (3.5,7.61) {};
+    \node[roundnode][label=\scalebox{0.8}{$e_2$}](u11) at (4.25,8.0) {};
+    \node[style={circle, fill=white, inner sep=0pt, minimum size=0.1mm}][label=\scalebox{1}{$x_2$}](u71) at (4.75, 7.61) {};
+    
+    \node[roundnode][label=\scalebox{0.8}{${e_5}$}](u12) at (-0.25,6.43) {};
+    \node[roundnode][label=\scalebox{0.75}{${v_{5,1\_T}}$}](u13) at (0.5,6.82) {};
+    \node[roundnode][label=\scalebox{0.75}{${v_{5,1\_F}}$}](u14) at (0.5,6.04) {};
+    \node[roundnode][label=\scalebox{0.75}{${v_{5,i\_T}}$}](u15) at (2.0,6.82) {};
+    \node[roundnode][label=\scalebox{0.75}{${v_{5,i\_F}}$}](u16) at (2.0,6.04) {};
+    %\node[roundnode][label=\scalebox{0.75}{${v_{3,2\_T}}$}](u17) at (2.5,6.7) {};
+    %\node[roundnode][label=\scalebox{0.75}{${v_{3,2\_F}}$}](u18) at (2.5,6) {};
+    \node[roundnode][label=\scalebox{0.75}{${v_{5,q\_T}}$}](u19) at (3.5,6.82) {};
+    \node[roundnode][label=\scalebox{0.75}{${v_{5,q\_F}}$}](u20) at (3.5,6.04) {};
+    \node[roundnode](u21) at (4.25,6.43) {};
+    \node[style={circle, fill=white, inner sep=0pt, minimum size=0.2mm}][label=\scalebox{0.8}{$s_5$}](u53) at (4.25, 5.86) {};
+    \node[style={circle, fill=white, inner sep=0pt, minimum size=0.1mm}][label=\scalebox{1}{$x_5$}](u72) at (4.75, 6.04) {};
+    
+    \node[roundnode](u22) at (-0.25,4.86) {};
+    \node[style={circle, fill=white, inner sep=0pt, minimum size=0.2mm}][label=\scalebox{0.8}{$s_7$}](u54) at (-0.25, 4.30) {};
+    \node[roundnode][label=\scalebox{0.75}{${v_{7,1\_T}}$}](u23) at (0.5,5.25) {};
+    \node[roundnode][label=\scalebox{0.75}{${v_{7,1\_F}}$}](u24) at (0.5,4.47) {};
+    \node[roundnode][label=\scalebox{0.75}{${v_{7,i\_T}}$}](u25) at (2.0,5.25) {};
+    \node[roundnode][label=\scalebox{0.75}{${v_{7,i\_F}}$}](u26) at (2.0,4.47) {};
+    %\node[roundnode][label=\scalebox{0.75}{${v_{3,3\_T}}$}](u27) at (2.5,5.25) {};
+    %\node[roundnode][label=\scalebox{0.75}{${v_{3,3\_F}}$}](u28) at (2.5,4.55) {};
+    \node[roundnode][label=\scalebox{0.75}{${v_{7,q\_T}}$}](u29) at (3.5,5.25) {};
+    \node[roundnode][label=\scalebox{0.75}{${v_{7,q\_F}}$}](u30) at (3.5,4.47) {};
+    \node[roundnode][label=\scalebox{0.8}{$e_7$}](u31) at (4.25,4.82) {};
+    \node[style={circle, fill=white, inner sep=0pt, minimum size=0.1mm}][label=\scalebox{1}{$x_7$}](u73) at (4.75, 4.45) {};
+    
+    \node[roundnode][label=\scalebox{0.8}{${e_n}$}](u32) at (-0.25,3.29) {};
+    \node[roundnode][label=\scalebox{0.75}{${v_{n,1\_T}}$}](u33) at (0.5,3.66) {};
+    \node[roundnode][label=\scalebox{0.75}{${v_{n,1\_F}}$}](u34) at (0.5,2.92) {};
+    \node[roundnode][label=\scalebox{0.75}{${v_{n,i\_T}}$}](u35) at (2.0,3.66) {};
+    \node[roundnode][label=\scalebox{0.75}{${v_{n,i\_F}}$}](u36) at (2.0,2.92) {};
+    %\node[roundnode][label=\scalebox{0.75}{${v_{3,4\_T}}$}](u37) at (2.5,3.8) {};
+    %\node[roundnode][label=\scalebox{0.75}{${v_{3,4\_F}}$}](u38) at (2.5,3.1) {};
+    \node[roundnode][label=\scalebox{0.75}{${v_{n,q\_T}}$}](u39) at (3.5,3.66) {};
+    \node[roundnode][label=\scalebox{0.75}{${v_{n,q\_F}}$}](u40) at (3.5,2.92) {};
+    \node[roundnode](u41) at (4.25,3.29) {};
+    \node[style={circle, fill=white, inner sep=0pt, minimum size=0.2mm}][label=\scalebox{0.8}{$s_n$}](u55) at (4.25, 2.77) {};
+    \node[style={circle, fill=white, inner sep=0pt, minimum size=0.1mm}][label=\scalebox{1}{$x_n$}](u74) at (4.75, 2.92) {};
+    
+    \node[style={circle, fill=white, inner sep=0pt, minimum size=0.1mm}](u85) at (4.75, 3.37) {};
+    
+    %\node[roundnode](u42) at (-1,3.5) {};
+    %\node[roundnode](u43) at (-1,2) {};
+    
+    \node[roundnode](u43) at (-0.25,2.55) {};
+    \node[roundnode](u44) at (0.15,2.55) {};
+    \node[roundnode](u45) at (0.85,2.55) {};
+    \node[roundnode](u46) at (1.65,2.55) {};
+    \node[roundnode](u47) at (2.35,2.55) {};
+    %\node[roundnode](u48) at (2.2,2.55) {};
+    %\node[roundnode](u49) at (2.8,2.55) {};
+    \node[roundnode](u50) at (3.15,2.55) {};
+    \node[roundnode](u51) at (3.85,2.55) {};
+    
+    \node[roundnode](u52) at (4.7,2.55) {};
+    \node[style={circle, fill=white, inner sep=0pt, minimum size=0.1mm}][label=\scalebox{0.9}{$t$}](u81) at (4.75, 2.1) {};
+    
+    \node[style={circle, fill=white, inner sep=0pt, minimum size=0.1mm}][label=\scalebox{0.75}{${c_{1_{in}}}$}](u56) at (0.15,2.05) {};
+    \node[style={circle, fill=white, inner sep=0pt, minimum size=0.1mm}][label=\scalebox{0.75}{${c_{1_{out}}}$}](u57) at (0.95,2.05) {};
+    \node[style={circle, fill=white, inner sep=0pt, minimum size=0.1mm}][label=\scalebox{0.75}{${c_{i_{in}}}$}](u58) at (1.75,2.05) {};
+    \node[style={circle, fill=white, inner sep=0pt, minimum size=0.1mm}][label=\scalebox{0.75}{${c_{i_{out}}}$}](u59) at (2.45,2.05) {};
+    \node[style={circle, fill=white, inner sep=0pt, minimum size=0.1mm}][label=\scalebox{0.75}{${c_{q_{in}}}$}](u60) at (3.25,2.05) {};
+    \node[style={circle, fill=white, inner sep=0pt, minimum size=0.1mm}][label=\scalebox{0.75}{${c_{q_{out}}}$}](u61) at (3.95,2.05) {};
+    
+    \node[style={circle, fill=white, inner sep=0pt, minimum size=0.1mm}][label=\scalebox{0.75}{$c_{start}$}](u91) at (-0.68, 2.32) {};
+    
+            %Lines
+            \draw[dotted, thick] (u1) -- (u2);
+            \draw[-] (u2) -- (u3);
+            \draw[-] (u2) -- (u4);
+            \draw[dotted, thick] (u3) -- (u5); 
+            \draw[dotted, thick] (u4) -- (u6);
+            %\draw[-] (u5) -- (u7);
+            %\draw[-] (u6) -- (u8);
+            \draw[dotted, thick] (u5) -- (u9);
+            \draw[dotted, thick] (u6) -- (u10);
+            \draw[-] (u9) -- (u11); 
+            \draw[-] (u10) -- (u11);
+            
+            \draw[dotted, thick] (u11) -- (u21);
+            
+            \draw[-] (u12) -- (u13);
+            \draw[-] (u12) -- (u14);
+            \draw[dotted, thick] (u13) -- (u15); 
+            \draw[dotted, thick] (u14) -- (u16);
+            %\draw[-] (u15) -- (u17);
+            %\draw[-] (u16) -- (u18);
+            \draw[dotted, thick] (u15) -- (u19);
+            \draw[dotted, thick] (u16) -- (u20);
+            \draw[-] (u19) -- (u21); 
+            \draw[-] (u20) -- (u21);
+            
+            \draw[dotted, thick] (u12) -- (u22);
+            
+            \draw[-] (u22) -- (u23);
+            \draw[-] (u22) -- (u24);
+            \draw[dotted, thick] (u23) -- (u25); 
+            \draw[dotted, thick] (u24) -- (u26);
+            %\draw[-] (u25) -- (u27);
+            %\draw[-] (u26) -- (u28);
+            \draw[dotted, thick] (u25) -- (u29);
+            \draw[dotted, thick] (u26) -- (u30);
+            \draw[-] (u29) -- (u31); 
+            \draw[-] (u30) -- (u31);
+            
+            \draw[dotted, thick] (u31) -- (u41);
+            
+            \draw[-] (u32) -- (u33);
+            \draw[-] (u32) -- (u34);
+            \draw[dotted, thick] (u33) -- (u35); 
+            \draw[dotted, thick] (u34) -- (u36);
+            %\draw[-] (u35) -- (u37);
+            %\draw[-] (u36) -- (u38);
+            \draw[dotted, thick] (u35) -- (u39);
+            \draw[dotted, thick] (u36) -- (u40);
+            \draw[-] (u39) -- (u41); 
+            \draw[-] (u40) -- (u41);
+            
+            \draw[dotted, thick] (u73) -- (u85);
+            
+            %\draw[-] (u32) -- (u42);
+            %\draw[-] (u42) -- (u43);
+            \draw[-] (u32) -- (u43);
+            \draw[-] (u43) -- (u44); 
+            \draw[dotted, thick] (u45) -- (u46);
+            %\draw[-] (u47) -- (u48);
+            %\draw[-] (u49) -- (u50);
+            \draw[dotted, thick] (u47) -- (u50);
+            \draw[-] (u51) -- (u52);
+            
+            %\draw[-, cyan] (u6.south) to [out=225,in=93] (u46.north);
+                %(u4) -- (u44);
+            %\draw[-, cyan] (u6.south) to [out=315,in=87] (u47.north);
+            \draw[-, cyan] (u15.south) to [out=240,in=89] (u46.north);
+            \draw[-, cyan] (u15.south) to [out=300,in=89] (u47.north);
+            \draw[-, cyan] (u26.south) to [out=255,in=90] (u46.north);
+            \draw[-, cyan] (u26.south) to [out=285,in=90] (u47.north);
+            
+\end{tikzpicture}
