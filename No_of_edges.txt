@@ -14,5 +14,5 @@ n loops = n*(q+1)
 edges between claues = q-1
 jumping to next variable = n-1
 jumping from clauses to variables = 2*q
-total = 4 + 2n*(q+1) + q-1 + n-1 + 2*q
+total = 4 + n*(q+1) + q-1 + n-1 + 2*q
 
